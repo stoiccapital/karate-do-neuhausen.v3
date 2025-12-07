@@ -29,7 +29,7 @@ export default function HeroKarateDoNeuhausen({ locale }: HeroKarateDoNeuhausenP
             </TextBlock>
             <CtaGroup>
               <a
-                href="#final-cta"
+                href="https://wa.me/491791226471"
                 className="px-8 py-4 bg-black text-white rounded-lg font-semibold hover:bg-gray-900 transition-colors text-center"
               >
                 {content.primaryCta}

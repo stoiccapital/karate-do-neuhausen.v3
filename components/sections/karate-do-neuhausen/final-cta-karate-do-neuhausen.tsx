@@ -26,7 +26,7 @@ export default function FinalCtaKarateDoNeuhausen({ locale }: FinalCtaKarateDoNe
           </TextBlock>
           <CtaGroup className="justify-center pt-4">
             <a
-              href="#final-cta"
+              href="https://wa.me/491791226471"
               className="px-10 py-5 bg-black text-white rounded-lg font-semibold hover:bg-gray-900 transition-colors text-lg"
             >
               {content.primaryCta}

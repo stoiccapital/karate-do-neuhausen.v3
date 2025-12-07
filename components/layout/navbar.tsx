@@ -83,7 +83,7 @@ export default function Navbar({ locale }: NavbarProps) {
 
             {/* Primary CTA Button */}
             <a
-              href="#final-cta"
+              href="https://wa.me/491791226471"
               className="px-6 py-2 bg-black text-white rounded-lg font-semibold hover:bg-gray-900 transition-colors"
             >
               {content.primaryCta}
@@ -185,7 +185,7 @@ export default function Navbar({ locale }: NavbarProps) {
               {/* Mobile CTA Button */}
               <div className="px-4 py-2 border-t border-gray-200">
                 <a
-                  href="#final-cta"
+                  href="https://wa.me/491791226471"
                   onClick={closeMobileMenu}
                   className="block w-full px-6 py-3 bg-black text-white rounded-lg font-semibold hover:bg-gray-900 transition-colors text-center"
                 >

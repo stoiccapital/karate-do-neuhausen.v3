@@ -50,7 +50,7 @@ export default function PricingKarateDoNeuhausen({ locale }: PricingKarateDoNeuh
                   ))}
                 </ul>
                 <a
-                  href="#final-cta"
+                  href="https://wa.me/491791226471"
                   className="w-full px-6 py-3 bg-black text-white rounded-lg font-semibold hover:bg-gray-900 transition-colors text-center"
                 >
                   {plan.ctaLabel}
