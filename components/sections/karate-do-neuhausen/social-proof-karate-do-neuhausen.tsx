@@ -34,7 +34,8 @@ export default function SocialProofKarateDoNeuhausen({ locale }: SocialProofKara
           </div>
           
           {/* 2x2 Grid */}
-          <div className="grid grid-cols-2 gap-6 mt-12">
+          {/* Social proof grid: 1x4 on mobile, 2x2 on md+ */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             {content.cards.map((card, index) => (
               <Card key={index} className="text-center">
                 <Heading level={3} className="text-black mb-3">

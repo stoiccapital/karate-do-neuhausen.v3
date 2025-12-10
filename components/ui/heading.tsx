@@ -9,7 +9,7 @@ interface HeadingProps {
 
 export default function Heading(props: HeadingProps) {
   const level = props.level || 2;
-  const baseClasses = 'font-bold';
+  const baseClasses = 'font-bold break-words hyphens-auto';
   const sizeClasses = {
     1: 'text-4xl md:text-5xl lg:text-6xl',
     2: 'text-3xl md:text-4xl lg:text-5xl',

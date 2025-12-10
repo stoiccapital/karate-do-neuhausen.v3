@@ -16,7 +16,7 @@ const sizeClasses = {
 export default function TextBlock(props: TextBlockProps) {
   const size = props.size || 'base';
   return (
-    <p className={`${sizeClasses[size]} ${props.className || ''}`}>
+    <p className={`break-words hyphens-auto ${sizeClasses[size]} ${props.className || ''}`}>
       {props.children}
     </p>
   );

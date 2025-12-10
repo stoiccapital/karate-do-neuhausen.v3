@@ -15,6 +15,10 @@ export interface HeroCopy {
   primaryCta: string;
   secondaryCta: string;
   mediaAlt: string;
+  image?: {
+    src: string;
+    alt: string;
+  };
 }
 
 export interface SocialProofCopy {
@@ -33,7 +37,7 @@ export interface ValuePropsCopy {
 
 export interface FeaturesCopy {
   heading: string;
-  items: Array<{ title: string; body: string; visualLabel: string }>;
+  items: Array<{ title: string; body: string; visualLabel: string; image?: { src: string; alt: string } }>;
 }
 
 export interface DeepDivesCopy {
@@ -44,6 +48,7 @@ export interface DeepDivesCopy {
     paragraph: string;
     bullets: string[];
     visualLabel: string;
+    image?: { src: string; alt: string };
   };
   blockB: {
     title: string;
@@ -152,6 +157,10 @@ export const copy: Record<Locale, KarateDoNeuhausenCopy> = {
       primaryCta: 'Book a trial class',
       secondaryCta: 'View Schedule',
       mediaAlt: 'Hero Image: Dojo Training Scene',
+      image: {
+        src: '/images/karate-do-neuhausen/hero.jpg',
+        alt: 'Children and adults practicing karate training in Neuhausen dojo',
+      },
     },
     socialProof: {
       heading: 'Why parents trust us',
@@ -435,6 +444,10 @@ export const copy: Record<Locale, KarateDoNeuhausenCopy> = {
       primaryCta: 'Probestunde buchen',
       secondaryCta: 'Trainingszeiten ansehen',
       mediaAlt: 'Hero-Bild: Training im Dojo',
+      image: {
+        src: '/images/karate-do-neuhausen/hero.jpg',
+        alt: 'Kinder und Erwachsene beim Karate-Training im Dojo Neuhausen',
+      },
     },
     socialProof: {
       heading: 'Warum Eltern uns vertrauen',
@@ -489,21 +502,37 @@ export const copy: Record<Locale, KarateDoNeuhausenCopy> = {
           title: 'Zwei Trainingseinheiten pro Woche',
           body: 'Die Schüler trainieren zweimal pro Woche nach klar strukturierten Unterrichtseinheiten. So entstehen feste Routinen, die das Selbstvertrauen stärken.',
           visualLabel: 'Visual: Zwei Trainingseinheiten pro Woche',
+          image: {
+            src: '/images/karate-do-neuhausen/zweimal-pro-woche.jpg',
+            alt: 'Zwei Trainingseinheiten pro Woche',
+          },
         },
         {
           title: 'Gürtelfortschritt in fünf Jahren',
           body: 'Bei regelmäßigem Training können Schüler den schwarzen Gürtel in etwa fünf Jahren erreichen. Eltern erhalten damit einen klaren Zeitrahmen für messbare Entwicklung.',
           visualLabel: 'Visual: Gürtelfortschritt in fünf Jahren',
+          image: {
+            src: '/images/karate-do-neuhausen/guertelfortschritt-fuenf-jahre.jpg',
+            alt: 'Gürtelfortschritt in fünf Jahren',
+          },
         },
         {
           title: 'Shotokan-Karate-Stil',
           body: 'Wir unterrichten traditionellen Shotokan-Karate mit klar definierten Formen und Übungen. Das gibt Kindern eine stabile Grundlage für den weiteren Aufbau ihrer Fähigkeiten.',
           visualLabel: 'Visual: Shotokan-Karate-Stil',
+          image: {
+            src: '/images/karate-do-neuhausen/shotokan-karate-stil.jpg',
+            alt: 'Shotokan-Karate-Stil',
+          },
         },
         {
           title: 'Trainer mit 7. und 8. Dan',
           body: 'Das Training wird von langjährigen Karatesportlern mit hohen Dan-Graden geleitet. Das sichert eine verlässliche Anleitung und unterstützt die Entwicklung der Schüler.',
           visualLabel: 'Visual: Trainer mit 7. und 8. Dan',
+          image: {
+            src: '/images/karate-do-neuhausen/trainer-7-8-dan.jpg',
+            alt: 'Trainer mit 7. und 8. Dan',
+          },
         },
       ],
     },
@@ -521,6 +550,10 @@ export const copy: Record<Locale, KarateDoNeuhausenCopy> = {
           'Sicheres und strukturiertes Lernumfeld',
         ],
         visualLabel: 'Visual: Trainingsmethode',
+        image: {
+          src: '/images/karate-do-neuhausen/traditionelles-karate-moderne-paedagogik.jpg',
+          alt: 'Traditionelles Karate, moderne Pädagogik',
+        },
       },
       blockB: {
         title: 'Kursaufbau & Trainingszeiten',

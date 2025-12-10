@@ -1,6 +1,7 @@
 // Hero Section
 // Single responsibility: Premium hero section with split-grid layout
 
+import Image from 'next/image';
 import SectionContainer from '@/components/ui/section-container';
 import Heading from '@/components/ui/heading';
 import TextBlock from '@/components/ui/text-block';
@@ -18,9 +19,9 @@ export default function HeroKarateDoNeuhausen({ locale }: HeroKarateDoNeuhausenP
   return (
     <section id="hero" className="py-20 md:py-24 lg:py-32">
       <SectionContainer>
-        <div className="grid md:grid-cols-12 gap-8 lg:gap-12 items-center">
-          {/* Text Content - Left Side */}
-          <div className="md:col-span-6 space-y-8">
+        <div className="grid gap-10 md:grid-cols-2 md:items-center">
+          {/* Text column */}
+          <div className="space-y-8">
             <Heading level={1} className="text-black">
               {content.h1}
             </Heading>
@@ -43,14 +44,21 @@ export default function HeroKarateDoNeuhausen({ locale }: HeroKarateDoNeuhausenP
             </CtaGroup>
           </div>
 
-          {/* Media - Right Side */}
-          <div className="md:col-span-6">
+          {/* Image column */}
+          {content.image && (
             <MediaContainer>
-              <div className="aspect-[4/3] bg-gray-100 rounded-lg flex items-center justify-center border border-gray-200">
-                <span className="text-gray-400 text-sm">{content.mediaAlt}</span>
+              <div className="relative aspect-[4/3] w-full rounded-lg border border-gray-200 overflow-hidden">
+                <Image
+                  src={content.image.src}
+                  alt={content.image.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  priority
+                />
               </div>
             </MediaContainer>
-          </div>
+          )}
         </div>
       </SectionContainer>
     </section>

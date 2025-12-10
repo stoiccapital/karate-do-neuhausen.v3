@@ -1,6 +1,7 @@
 // Deep Dives Section
 // Single responsibility: Methodology, class structure, teacher qualifications, schedule
 
+import Image from 'next/image';
 import SectionContainer from '@/components/ui/section-container';
 import Heading from '@/components/ui/heading';
 import TextBlock from '@/components/ui/text-block';
@@ -49,11 +50,23 @@ export default function DeepDivesKarateDoNeuhausen({ locale }: DeepDivesKarateDo
             </div>
             <div className="md:col-span-6">
               <MediaContainer>
-                <div className="aspect-[4/3] bg-gray-100 rounded-lg flex items-center justify-center border border-gray-200">
-                  <span className="text-gray-400 text-sm text-center px-4">
-                    {content.blockA.visualLabel}
-                  </span>
-                </div>
+                {content.blockA.image ? (
+                  <div className="relative aspect-[4/3] w-full rounded-lg border border-gray-200 overflow-hidden">
+                    <Image
+                      src={content.blockA.image.src}
+                      alt={content.blockA.image.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                    />
+                  </div>
+                ) : (
+                  <div className="aspect-[4/3] bg-gray-100 rounded-lg flex items-center justify-center border border-gray-200">
+                    <span className="text-gray-400 text-sm text-center px-4">
+                      {content.blockA.visualLabel}
+                    </span>
+                  </div>
+                )}
               </MediaContainer>
             </div>
           </div>
